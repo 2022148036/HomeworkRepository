@@ -279,6 +279,8 @@ def show_top_stats(internet_data, literacy_data):
         beep_ok()
         show_message("\n".join(lines))
 
+        screen.textinput("Result", "Press OK to return to the main menu.")
+
     elif metric == "2":
         # All countries with maximum literacy
         if not literacy_data:
@@ -421,6 +423,8 @@ def main_turtle():
                     "    sqrt( [n Σx² - (Σx)²] [n Σy² - (Σy)²] )"
                 )
                 log_error(f"Correlation computed: r = {r:.4f} using {len(x_values)} countries.")
+
+                screen.textinput("Result", "Press OK to return to the main menu.")
 
         elif choice == "3":
             beep_ok()
